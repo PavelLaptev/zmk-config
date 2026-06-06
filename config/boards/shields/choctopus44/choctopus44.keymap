@@ -17,12 +17,12 @@
   combos {
     compatible = "zmk,combos";
 
-    // Unlock ZMK Studio: press the two TOP OUTER CORNER keys together
-    // (top-left-most switch + top-right-most switch). Position 0 + 11.
-    // Generous timeout so a two-handed press doesn't need perfect timing.
+    // Unlock ZMK Studio: press S + N together.
+    // S = position 14 (left hand, home row), N = position 31 (right hand,
+    // bottom row). Different hands, so it won't fire during normal typing.
     combo_studio_unlock {
-      timeout-ms = <250>;
-      key-positions = <0 11>;
+      timeout-ms = <150>;
+      key-positions = <14 31>;
       bindings = <&studio_unlock>;
     };
   };
